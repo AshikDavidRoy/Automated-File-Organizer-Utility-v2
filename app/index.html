@@ -1,0 +1,178 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class='box'>
+        <div class='box-form'>
+            <div class='box-login-tab'></div>
+            <div class='box-login-title'>
+                <div class='i i-login'></div>
+                <h2>Automated File Organizer Utility</h2>
+            </div>
+            <div class='box-login'>
+                <div class='fieldset-body' id='login_form'>
+                    <button onclick="openLoginInfo();" class='b b-form i i-more' title='Mais Informações'></button>
+                    <p class='field'>
+                        <label for='user'>E-MAIL</label>
+                        <input type='text' id='user' name='user' title='Username' /> 
+                         <input type="file" webkitdirectory directory multiple/>
+                        <span id='valida' class='i i-warning'></span>
+                    </p>
+                    <p class='field'>
+                        <label for='pass'>PASSWORD</label>
+                        <input type='password' id='pass' name='pass' title='Password' />
+                        <span id='valida' class='i i-close'></span>
+                    </p>
+
+                    <label class='checkbox'>
+                        <input type='checkbox' value='TRUE' title='Keep me Signed in' /> Keep me Signed in
+                    </label>
+
+                    <input type='submit' id='do_login' value='GET STARTED' title='Get Started' />
+                </div>
+            </div>
+        </div>
+        <div class='box-info'>
+            <p><button onclick="closeLoginInfo();" class='b b-info i i-left' title='Back to Sign In'></button>
+            <h3>Need Help?</h3>
+            </p>
+            <div class='line-wh'></div>
+            <button onclick="" class='b-support' title='Forgot Password?'> Forgot Password?</button>
+            <button onclick="" class='b-support' title='Contact Support'> Contact Support</button>
+            <div class='line-wh'></div>
+            <button onclick="" class='b-cta' title='Sign up now!'> CREATE ACCOUNT</button>
+        </div>
+    </div>
+
+
+    <div class='icon-credits'>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a>, <a
+            href="http://www.flaticon.com/authors/budi-tanrim" title="Budi Tanrim">Budi Tanrim</a> & <a
+            href="http://www.flaticon.com/authors/nice-and-serious" title="Nice and Serious">Nice and Serious</a> from
+        <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a
+            href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0
+            BY</a></div>
+
+</body>
+<script src="script.js"></script>
+
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-form">
+            <div class="box-login-tab"></div>
+            <div class="box-login-title">
+                <div class="i i-login"></div>
+                <h2>Automated File Organizer</h2>
+            </div>
+            <div class="box-login">
+                <div class="fieldset-body" id="dashboard_form">
+                    <button onclick="openLoginInfo();" class="b b-form i i-more" title="More Info"></button>
+                    <p class="field">
+                        <label for="source-folder">Source Folder</label>
+                        <!-- <input type="text" id="source_folder" /> -->
+                          <input type="text" id="source_folder" placeholder="Enter folder path to organize">
+                        <!-- <input type="file" id="browse-source" webkitdirectory directory multiple hidden /> -->
+                        <!-- <button onclick="document.getElementById('browse-source').click()">Browse...</button> -->
+                    </p>
+
+                    <p class="field">
+                        <label for="destination-folder">Destination Folder (Optional)</label>
+                        <input type="text" id="destination-folder" disabled />
+                        <!-- <input type="file" id="browse-destination" webkitdirectory directory multiple hidden /> -->
+                        <!-- <button onclick="document.getElementById('browse-destination').click()">Browse...</button> -->
+                        <label class="checkbox">
+                            <input type="checkbox" id="enable-destination"
+                                onchange="document.getElementById('destination-folder').disabled = !this.checked;">
+                            Enable Destination Folder
+                        </label>
+                    </p>
+
+                    <p class="field">
+                        <label>File Types to Organize</label>
+                    <div class="file-types">
+                        <label><input type="checkbox" checked> All</label>
+                        <label><input type="checkbox"> Images</label>
+                        <label><input type="checkbox"> Documents</label>
+                        <label><input type="checkbox"> Videos</label>
+                        <label><input type="checkbox"> Music</label>
+                        <label><input type="checkbox"> Archives</label>
+                        <label><input type="checkbox"> Installers</label>
+                        <label><input type="checkbox"> Miscellaneous</label>
+                    </div>
+                    </p>
+
+                    <input type="submit" id="do_organize" value="Organize Files" title="Organize Files" />
+                </div>
+            </div>
+        </div>
+
+        <div class="box-info">
+            <div>
+                <button onclick="closeLoginInfo();" class="b b-info i i-left" title="Back"></button>
+                <h3>Advanced Options</h3>
+            </div>
+
+            <p class="field">
+                <label for="keywords">Keyword Folder Rules (comma-separated)</label>
+                <input type="text" id="keywords" placeholder="e.g. invoice, report, project" />
+            </p>
+
+            <label class="checkbox">
+                <input type="checkbox" id="include-subfolders"> Include Subfolders
+            </label>
+
+            <label class="checkbox">
+                <input type="checkbox" id="date-sorting"> Enable Date-Based Sorting
+            </label>
+
+            <!-- <p class="field">
+                <label>Progress</label>
+                <progress id="progress-bar" value="0" max="100" style="width:100%; display:none;"></progress>
+            </p> -->
+
+            <p class="field">
+                <label>Status / Log</label>
+                <textarea id="log-output" rows="5" readonly></textarea>
+            </p>
+            <!-- <input type="submit" id="undo_organize" value="Undo Organized Files" title="Undo Organize Files" /> -->
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
